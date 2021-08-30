@@ -5,8 +5,8 @@ import requests
 import json
 import os
 
-BOT_TOKEN = os.getenv('Token')
 
+BOT_TOKEN = os.getenv('Token')
 
 client = discord.Client()
 
@@ -60,7 +60,7 @@ async def on_message(message):
         return
 
     if message.content.startswith('hello'):
-        await message.channel.send('Welcome little potato, I\'m Bot-kun')
+        await message.channel.send(f'Welcome little potato, I\'m Bot-kun...\n $play -> Quiz Game \n $score -> Leaderboard')
 
     if message.content.startswith('$play'):
         question, answer, points = get_question()
