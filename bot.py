@@ -60,7 +60,7 @@ async def on_message(message):
         return
 
     if message.content.startswith('hello'):
-        await message.channel.send(f'Welcome little potato, I\'m Bot-kun...\n $play -> Quiz Game \n $score -> Leaderboard')
+        await message.channel.send(f'Welcome little potato 🥔, I\'m Bot-kun...\n $play -> Quiz Game \n $score -> Leaderboard')
 
     if message.content.startswith('$play'):
         question, answer, points = get_question()
@@ -72,7 +72,7 @@ async def on_message(message):
         try:
             guess = await client.wait_for('message', check=check, timeout=7.0)
         except asyncio.TimeoutError:
-            return await message.channel.send('Lazy Potato, you took too long')
+            return await message.channel.send('Lazy Potato🥴, you took too long')
 
         user = guess.author
         if int(guess.content) == answer:
