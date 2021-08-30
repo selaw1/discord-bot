@@ -14,7 +14,7 @@ def get_question():
     id = 1
     answer = 0
 
-    response = requests.get("https://tranquil-scrubland-27455.herokuapp.com/api")
+    response = requests.get("https://discordpotatobot-app.herokuapp.com/api/")
     json_data = json.loads(response.text)
 
     question += "**" + json_data[0]['title'] + "**" + "\n"
