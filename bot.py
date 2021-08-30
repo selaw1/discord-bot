@@ -3,9 +3,9 @@ from asyncio.tasks import wait_for
 import discord
 import requests
 import json
+import os
 
-
-BOT_TOKEN = 'ODgxNTg1MzMxODMxNDYzOTk4.YSu-Ug.2AX_0R_KXowT9zR7QaJljb59pTs'
+BOT_TOKEN = os.getenv('Token')
 client = discord.Client()
 
 
